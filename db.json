@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "U2FsdGVkX19lYWRtaW5AZ21haWwuY29t",
+      "password": "U2FsdGVkX18xMjM0NQ=="
+    }
+  ],
+  "students": [
+    {
+      "id": "e44c",
+      "fullName": "Shruti Shende",
+      "email": "U2FsdGVkX19Y8YbZZPyeYJqJoXqPKIUYYbl3LT1x49vwLGT+dJKx5wAdnASaBoE7",
+      "phone": "U2FsdGVkX18LBSqvOGeRXklwPVNTx83aU5cque8SSPU=",
+      "dob": "2025-09-05",
+      "gender": "female",
+      "address": "Samyak nagar",
+      "course": "maths",
+      "password": "U2FsdGVkX1//uqR7JWt7STn8W81a3sptjxIqcvAUbEk="
+    },
+    {
+      "id": "33de",
+      "fullName": "Natasha khaparde",
+      "email": "0cae7df72d9d7f05783185b57caf7599e9574579e356dc6acc3f012588b65079",
+      "phone": "395572ef5e7bcc3cc183d2ca190574a742601127b5a9d9e0c49698c25f6f8f81",
+      "dob": "2003-02-08",
+      "gender": "female",
+      "address": "congress nagar, nagpur",
+      "course": "english",
+      "password": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f"
+    }
+  ]
+}
