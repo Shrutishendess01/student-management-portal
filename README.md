@@ -1,73 +1,85 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+🎓 Student Management Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript + Vite application for secure student registration, login, and management.
+Sensitive data is encrypted (SHA256) before being stored to ensure privacy.
 
-Currently, two official plugins are available:
+🚀 Setup Instructions
+1. Clone the repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+git clone https://github.com/
+<your-username>/<your-repo-name>.git
+cd FORM
 
-## Expanding the ESLint configuration
+2. Install dependencies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+npm install
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3. Start frontend & backend
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Frontend → http://localhost:5173
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Backend (json-server) → http://localhost:4000
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🛠️ Tech Stack
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
-# student-management-portal
->>>>>>> e79108cbacacd5e148d514ad03a6468890b0b50e
+React
+
+TypeScript
+
+Vite
+
+React Router DOM
+
+Axios
+
+CryptoJS (SHA256)
+
+json-server
+
+CSS
+
+🔐 Data Encryption
+
+Sensitive fields such as email, password, and phone number are hashed using SHA256 before saving to db.json.
+
+Example:
+
+import CryptoJS from "crypto-js";
+
+export const hashData = (data: string): string => {
+return CryptoJS.SHA256(data).toString(CryptoJS.enc.Hex);
+};
+
+Registration → hashes inputs before saving.
+
+Login → hashes inputs before comparing with stored values.
+
+✨ Features
+
+🔑 Login with email & password (with password toggle)
+
+📝 Student registration form (all fields required, password toggle)
+
+📋 Student list with full CRUD operations
+
+🔗 Navigation header (Login, Register, Student List)
+
+🎉 Welcome page after login (header hidden, student list visible)
+
+📂 File Structure
+
+.
+├── components/ # React components (Login, Register, StudentList, etc.)
+├── crypto.ts # SHA256 hashing utility
+├── db.json # Database (json-server)
+├── package.json # Project configuration
+└── README.md # Documentation
+
+📝 Notes
+
+All sensitive data is hashed for security.
+
+To reset data, clear db.json and restart the server.
+
